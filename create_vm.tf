@@ -1,4 +1,4 @@
-#cria resource group
+#cria resource group !
 terraform {
   required_providers {
     azurerm = {
