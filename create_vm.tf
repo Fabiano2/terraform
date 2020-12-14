@@ -51,7 +51,7 @@ resource "azurerm_public_ip" "publicip" {
 # Create Network Security Group and rule
 resource "azurerm_network_security_group" "nsg" {
   name                = "myTFNSG"
-  location            = "brazilsouth"
+  location            = "westus2"
   resource_group_name = azurerm_resource_group.rg.name
 
   security_rule {
@@ -105,8 +105,8 @@ resource "azurerm_virtual_machine" "vm" {
 
   os_profile {
     computer_name  = "myTFVM"
-    admin_username = ${var.admin_username}
-    admin_password = ${var.admin_password}
+    admin_username = "${var.admin_username}"
+    admin_password = "${var.admin_password}"
   }
 
   os_profile_linux_config {
