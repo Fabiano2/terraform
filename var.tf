@@ -5,7 +5,7 @@ variable "admin_username"{
 }
 
 variable "admin_password"{
-    type = string
+   
     description = "user password for vm"
     default = "Palmeiras27#"
 }
