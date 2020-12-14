@@ -29,15 +29,7 @@ resource "azurerm_virtual_network" "vnet" {
     location            = "westus2"
     resource_group_name = azurerm_resource_group.rg.name
 }
-variable "admin_username" {
-    type = string
-    description = "Administrator user name for virtual machine"
-}
 
-variable "admin_password" {
-    type = string
-    description = "Password must meet Azure complexity requirements"
-}
 
 # Create subnet
 resource "azurerm_subnet" "subnet" {
